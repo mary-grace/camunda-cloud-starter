@@ -8,8 +8,9 @@ Getting Started with Camunda Cloud in 30 minutes with no code or installation of
 
 * Fork this repo to your own account.
 * Get a [Camunda Cloud](https://camunda.io) Account.
-* Create a new client in the Camunda Cloud console.
-* Click the button to copy the entire client configuration
+* Create a new cluster in the Camunda Cloud console.
+* Once the cluster is created, open it and create a new client
+* In your new client, click the button to copy the entire client configuration
 
 ![](img/client-config.png)
 
@@ -29,7 +30,7 @@ When you hit "Add secret", you should see this:
 
 ![](img/actionspanel-install.png)
 
-* Go back to [Actions Panel](https://www.actionspanel.app/)
+* Go back to [Actions Panel](https://www.actionspanel.app/) and navigate to your app (Sign In > Dashboard > click on organization > click on app)
 
 * You now have buttons to run the various demo workflows in this starter.
 
