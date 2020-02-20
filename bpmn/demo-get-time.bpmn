@@ -14,7 +14,7 @@
         <zeebe:taskDefinition type="CAMUNDA-HTTP" />
         <zeebe:taskHeaders>
           <zeebe:header key="url" value="https://json-api.joshwulf.com/time" />
-          <zeebe:header key="get" />
+          <zeebe:header key="method" value="get" />
         </zeebe:taskHeaders>
       </bpmn:extensionElements>
       <bpmn:incoming>SequenceFlow_0028b9j</bpmn:incoming>
