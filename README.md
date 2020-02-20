@@ -42,6 +42,8 @@ When you hit "Add secret", you should see this:
 
 ![](img/actions.png)
 
+_Note: You'll see a pop-up that says ```Workflows aren't being run in this forked repository.``` Click ```I understand my workflows...``` to bypass it._
+
 * Open [Actions Panel](https://www.actionspanel.app/) in another browser window.
 
 * In Actions Panel, click on "Run this action" for "_Deploy the demo workflows to your Camunda Cloud Zeebe cluster_". This will deploy the workflows to your cluster.
@@ -56,7 +58,7 @@ When you hit "Add secret", you should see this:
 
 ![](img/deployed.png)
 
-* The workflow definitions are now deployed to the cluster. Go to the Camunda Operate dashboard in Camunda Cloud and you will see them there.
+* The workflow definitions are now deployed to the cluster. Go to the Camunda Operate dashboard ([console.cloud.camunda.io/](https://console.cloud.camunda.io/) > Click on your cluster > View Workflow Instances in Camunda Operate) in Camunda Cloud and you will see them there.
 
 ![](img/deployed-operate.png)
 
@@ -70,6 +72,8 @@ Note that libraries are available to program [Zeebe clients in a number of popul
 
 ## Run the Get Time demo
 
+<!--- Can you add a description of what this is and why folks should add it at this time? This is a confusing jump if you don't know what all of these pieces are. --->
+
 The Get Time demo model is [bpmn/demo-get-time.bpmn](bpmn/demo-get-time.bpmn).
 
 If you open the model in the [Zeebe Modeler](https://github.com/zeebe-io/zeebe-modeler), you will see this:
@@ -78,7 +82,7 @@ If you open the model in the [Zeebe Modeler](https://github.com/zeebe-io/zeebe-m
 
 It has a single task in it. The task is serviced by the [Camunda Cloud HTTP Worker](https://github.com/zeebe-io/zeebe-http-worker). This is a task worker hosted in Camunda Cloud that services tasks of type `CAMUNDA-HTTP` and can make REST calls based on the task configuration, adding the JSON payload of the response to the workflow variables.
 
-To use it, you set the task type to `CAMUNDA-HTTP` and set two headers on the task that have particular semantics for this worker: `url` - what it says; and `method` - the HTTP method. The task in this demo workflow has the url set to [https://json-api.joshwulf.com/time](https://json-api.joshwulf.com/time) and the `method` set to "get".
+To use it, you set the task type to `CAMUNDA-HTTP` <!-- Where/how do I do this? I downloaded Zeebe Modeler, cloned the repo so I have a local version, and opened the `bpmn/demo-get-time.bpmn` file in Modeler, but still couldn't tell where I was supposed to set the task type or set headers. --> and set two headers on the task that have particular semantics for this worker: `url` - what it says; and `method` - the HTTP method. The task in this demo workflow has the url set to [https://json-api.joshwulf.com/time](https://json-api.joshwulf.com/time) and the `method` set to "get".
 
 In this workflow, it does a GET request to the [Camunda Cloud Demo JSON API](https://github.com/jwulf/camunda-cloud-demo-json-api) to get the current time as a JSON object.
 
